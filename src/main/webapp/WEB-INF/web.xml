@@ -33,14 +33,14 @@
     </listener>
 
 	<!--add USM JWToken validation to restrict the MAPFISH print-->
-<!--     <filter> -->
-<!--         <filter-name>AuthenticationFilter</filter-name> -->
-<!--         <filter-class>eu.europa.ec.fisheries.uvms.rest.security.AuthenticationFilter</filter-class> -->
-<!--     </filter> -->
-<!-- 	<filter-mapping> -->
-<!--        <filter-name>AuthenticationFilter</filter-name> -->
-<!--        <url-pattern>/*</url-pattern> -->
-<!--    	</filter-mapping> -->
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>eu.europa.ec.fisheries.uvms.rest.security.AuthenticationFilter</filter-class>
+    </filter>
+	<filter-mapping>
+       <filter-name>AuthenticationFilter</filter-name>
+       <url-pattern>/*</url-pattern>
+   	</filter-mapping>
    	
     <filter>
         <filter-name>requestSizeFilter</filter-name>
