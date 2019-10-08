@@ -6,7 +6,7 @@
         <version>1.19</version>
         <relativePath />
     </parent>
-	<groupId>eu.europa.ec.fisheries.uvms.mapfish.print.print-servlet-overlay</groupId>
+	<groupId>eu.europa.ec.fisheries.uvms.mapfish.print-servlet-overlay</groupId>
 	<artifactId>print-servlet</artifactId>
 	<version>3.20.1-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -20,7 +20,7 @@
 		<scm.connection>scm:git:https://github.com/UnionVMS/mapfish-print-overlay.git</scm.connection>
         <scm.url>scm:git:https://github.com/UnionVMS/mapfish-print-overlay.git</scm.url>
         <mapfish.print.version>3.20.2</mapfish.print.version>
-        <uvms.commons.version>4.0.16</uvms.commons.version>
+        <uvms.commons.version>4.0.23</uvms.commons.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -30,18 +30,18 @@
 		    <type>war</type>
 		    <scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>eu.europa.ec.fisheries.uvms</groupId>
-			<artifactId>usm4uvms</artifactId>
-			<type>jar</type>
-			<version>${uvms.commons.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>fish.focus.uvms.maven</groupId>
-					<artifactId>uvms-pom-logging-deps</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>eu.europa.ec.fisheries.uvms</groupId> -->
+<!-- 			<artifactId>usm4uvms</artifactId> -->
+<!-- 			<type>jar</type> -->
+<!-- 			<version>${uvms.commons.version}</version> -->
+<!-- 			<exclusions> -->
+<!-- 				<exclusion> -->
+<!-- 					<groupId>fish.focus.uvms.maven</groupId> -->
+<!-- 					<artifactId>uvms-pom-logging-deps</artifactId> -->
+<!-- 				</exclusion> -->
+<!-- 			</exclusions> -->
+<!-- 		</dependency> -->
 	</dependencies>
 	<build>
 		<plugins>
@@ -50,7 +50,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
 					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
-					<dependentWarExcludes>print-apps/**/*.*</dependentWarExcludes>
+					<dependentWarExcludes>WEB-INF/web.xml,print-apps/**/*.*</dependentWarExcludes>
 					<overlays>
 						<overlay>
 							<id>print-servlet</id>
