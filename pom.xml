@@ -8,12 +8,12 @@
     </parent>
 	<groupId>eu.europa.ec.fisheries.uvms.mapfish.print-servlet-overlay</groupId>
 	<artifactId>print-servlet</artifactId>
-	<version>3.20.2.0</version>
+	<version>3.20.2.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<url>https://github.com/UnionVMS/mapfish-print-overlay</url>
 	<scm>
         <connection>${scm.connection}</connection>
-        <tag>print-servlet-3.20.2.0</tag>
+        <tag>HEAD</tag>
     </scm>	
 	<properties>
 		<project.scm.id>github</project.scm.id>
